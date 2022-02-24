@@ -1,6 +1,6 @@
 package com.efimchick.tasks.figures;
 
-abstract class Figure{
+abstract class Figure implements Degenerate {
 
     public abstract double area();
 
@@ -11,4 +11,7 @@ abstract class Figure{
     public String toString() {
         throw new UnsupportedOperationException();
     }
+
+    public abstract Point leftMostPoint();
+
 }

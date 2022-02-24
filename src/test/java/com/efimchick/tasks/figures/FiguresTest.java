@@ -87,6 +87,13 @@ public class FiguresTest {
         assertFalse(new Circle(new Point(0, 0), 1).isTheSame(new Quadrilateral(new Point(0, 1), new Point(1, 1), new Point(1, 0), new Point(0, 0))));
     }
 
+    @Test
+    public void testPointsTheSame() {
+        assertEquals(new Point(0d,0d).compareTo(new Point(0d,0d)), 0);
+        assertEquals(new Point(sqrt(2),sqrt(2)).compareTo(new Point(sqrt(2),sqrt(2))), 0);
+        assertEquals(new Point(sqrt(2) * sqrt(2),sqrt(2) * sqrt(2)).compareTo(new Point(2d,2d)), 0);
+    }
+
 
 
     private List<Figure> figures;
